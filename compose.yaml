@@ -8,6 +8,11 @@ services:
       - mode: ingress
         target: 8888
         published: 8888
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
     environment:
       JUPYTER_TOKEN:
       POSTGRES_PASSWORD:
